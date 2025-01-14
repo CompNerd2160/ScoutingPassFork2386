@@ -119,18 +119,7 @@ var config_data = `
       "code": "tns",
       "type": "counter"
     },
-    { "name": "Pickup From",
-      "code": "tpu",
-      "type": "radio",
-      "choices": {
-        "s": "Coral Station<br>",
-        "f": "Floor<br>",
-        "b": "Both<br>",
-        "x": "Not Attempted"
-      },
-      "defaultValue": "x"
-    },
-    { "name": "Scored in<br>Opponent<br>Processor",
+    { "name": "Scored in Opponent Processor",
       "code": "opp",
       "type": "bool"
     }
@@ -140,65 +129,31 @@ var config_data = `
       "code": "ebt",
       "type": "timer"
     },
-    { "name": "Final Robot Status",
+    { "name": "Final Status",
       "code": "efs",
       "type":"radio",
       "choices": {
-        "bp": "Parked<br>",
-        "ba": "Parked/Failed Climb<br>",
-        "bs": "Shallow Cage<br>",
-        "bd": "Deep Cage<br>",
-        "x": "Not attempted"
+        "2": "Parked<br>",
+        "2": "Parked, failed climb<br>",
+        "6": "Shallow Cage<br>",
+        "12": "Deep Cage<br>",
+        "0": "Not attempted or not parked"
       },
-      "defaultValue": "x"
+      "defaultValue": "0"
     }
   ],
   "postmatch": [
-    { "name": "Attained Coopertition Pt",
-      "code": "cop",
-      "type": "bool"
-    },
-    { "name": "Algae Left in Reef",
-      "code": "alr",
-      "type": "number",
-      "min": 0,
-      "max": 9,
-      "defaultValue": 0
-    },
-    { "name": "Driver Skill",
-      "code": "ds",
-      "type": "radio",
-      "choices": {
-        "n": "Not Effective<br>",
-        "a": "Average<br>",
-        "v": "Very Effective<br>",
-        "x": "Not Observed"
-      },
-      "defaultValue": "x"
-    },
-    { "name": "Defense Rating",
+    { "name": "Defense Rating (optional)",
       "code": "dr",
       "type": "radio",
       "choices": {
-        "b": "Below Average<br>",
-        "a": "Average<br>",
-        "g": "Good<br>",
-        "e": "Excellent<br>",
-        "x": "Did not play defense"
+        "1": "Did not significantly slow down bots<br>",
+        "2": "Slowed one or two bots down significantly<br>",
+        "3": "Shut down a bot or slowed all bots significantly<br>",
+        "4": "Shut down 1 or more bots, slowed others<br>",
+        "0": "Did not play defense"
       },
-      "defaultValue": "x"
-    },
-    { "name": "Speed Rating",
-      "code": "sr",
-      "type": "radio",
-      "choices": {
-        "1": "1 (slow)<br>",
-        "2": "2<br>",
-        "3": "3<br>",
-        "4": "4<br>",
-        "5": "5 (fast)"
-      },
-      "defaultValue":"3"
+      "defaultValue": "0"
     },
     { "name": "Died/Immobilized",
       "code": "die",
@@ -206,19 +161,6 @@ var config_data = `
     },
     { "name": "Tippy<br>(almost tipped over)",
       "code": "tip",
-      "type": "bool"
-    },
-    { "name": "Dropped Coral (>2)",
-      "code": "dc",
-      "type": "bool"
-    },
-    { "name": "Dropped Algae (>2)",
-      "code": "da",
-      "type": "bool"
-    },
-    { "name": "Make good<br>alliance partner?",
-      "tooltip": "Would you want this robot on your alliance in eliminations?",
-      "code": "all",
       "type": "bool"
     },
     { "name": "Comments",
