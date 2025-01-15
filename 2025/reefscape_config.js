@@ -33,7 +33,7 @@ var config_data = `
       "code": "m",
       "type": "match",
       "min": 1,
-      "max": 150,
+      "max": 999,
       "required": "true"
     },
     { "name": "Robot",
@@ -54,14 +54,6 @@ var config_data = `
       "type": "team",
       "min": 1,
       "max": 99999
-    },
-    { "name": "Auto Start Position",
-      "code": "as",
-      "type": "clickable_image",
-      "filename": "2025/field_image.png",
-      "clickRestriction": "one",
-      "allowableResponses": "6 7 18 19 30 31 42 43 54 55 66 67",
-      "shape": "circle 5 black red true"
     }
   ],
   "auton": [
@@ -119,7 +111,7 @@ var config_data = `
       "code": "tns",
       "type": "counter"
     },
-    { "name": "Scored in Opponent Processor",
+    { "name": "Knocked Algae Off Reef",
       "code": "opp",
       "type": "bool"
     }
@@ -151,9 +143,9 @@ var config_data = `
         "2": "Slowed one or two bots down significantly<br>",
         "3": "Shut down a bot or slowed all bots significantly<br>",
         "4": "Shut down 1 or more bots, slowed others<br>",
-        "0": "Did not play defense"
+        "n": "Did not play defense"
       },
-      "defaultValue": "0"
+      "defaultValue": "n"
     },
     { "name": "Died/Immobilized",
       "code": "die",
