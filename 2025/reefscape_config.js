@@ -12,10 +12,10 @@ var config_data = `
       "maxSize": 5,
       "required": "true"
     },
-    { "name": "DO NOT ENTER TEXT INTO THIS FIELD",
+    { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": ""
+      "defaultValue": "Newmarket"
     },
     { "name": "Match #",
       "code": "m",
