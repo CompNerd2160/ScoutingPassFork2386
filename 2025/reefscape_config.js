@@ -5,6 +5,11 @@ var config_data = `
   "page_title": "REEFSCAPE",
   "checkboxAs": "10",
   "prematch": [
+    { "name": "Event",
+      "code": "e",
+      "type": "event",
+      "defaultValue": "Newmarket"
+    },
     { "name": "Scouter Initials",
       "code": "s",
       "type": "scouter",
@@ -12,11 +17,7 @@ var config_data = `
       "maxSize": 5,
       "required": "true"
     },
-    { "name": "Event",
-      "code": "e",
-      "type": "event",
-      "defaultValue": "Newmarket"
-    },
+    
     { "name": "Match #",
       "code": "m",
       "type": "match",
