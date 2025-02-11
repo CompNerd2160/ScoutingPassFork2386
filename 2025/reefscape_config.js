@@ -12,28 +12,16 @@ var config_data = `
       "maxSize": 5,
       "required": "true"
     },
-    { "name": "Event",
+    { "name": "DO NOT ENTER TEXT INTO THIS FIELD",
       "code": "e",
       "type": "event",
-      "defaultValue": "2025ilpe",
-      "required": "true"
-    },
-    { "name": "Match Level",
-      "code": "l",
-      "type": "level",
-      "choices": {
-        "qm": "Quals<br>",
-        "sf": "Semifinals<br>",
-        "f": "Finals"
-      },
-      "defaultValue": "qm",
-      "required": "true"
+      "defaultValue": ""
     },
     { "name": "Match #",
       "code": "m",
       "type": "match",
       "min": 1,
-      "max": 999,
+      "max": 150,
       "required": "true"
     },
     { "name": "Robot",
@@ -54,15 +42,8 @@ var config_data = `
       "type": "team",
       "min": 1,
       "max": 99999
-    },
-    { "name": "Auto Start Position",
-      "code": "as",
-      "type": "clickable_image",
-      "filename": "2025/field_image.png",
-      "clickRestriction": "one",
-      "allowableResponses": "6 7 18 19 30 31 42 43 54 55 66 67",
-      "shape": "circle 5 black red true"
     }
+    
   ],
   "auton": [
     { "name": "Leave Starting Line",
@@ -125,35 +106,27 @@ var config_data = `
     }
   ],
   "endgame": [
-    { "name": "Barge Timer",
-      "code": "ebt",
-      "type": "timer"
+    {"name": "Parked",
+      "code": "bp",
+      "type": "bool"
     },
-    { "name": "Final Status",
-      "code": "efs",
-      "type":"radio",
-      "choices": {
-        "2": "Parked<br>",
-        "2": "Parked, failed climb<br>",
-        "6": "Shallow Cage<br>",
-        "12": "Deep Cage<br>",
-        "0": "Not attempted or not parked"
-      },
-      "defaultValue": "0"
+    {"name": "Shallow Cage",
+      "code": "bs",
+      "type": "bool"
+    },
+    {"name": "Deep Cage",
+      "code": "bd",
+      "type": "bool"
     }
   ],
   "postmatch": [
-    { "name": "Defense Rating (optional)",
-      "code": "dr",
-      "type": "radio",
-      "choices": {
-        "1": "Did not significantly slow down bots<br>",
-        "2": "Slowed one or two bots down significantly<br>",
-        "3": "Shut down a bot or slowed all bots significantly<br>",
-        "4": "Shut down 1 or more bots, slowed others<br>",
-        "n": "Did not play defense"
-      },
-      "defaultValue": "n"
+    {"name": "Bot Played Defense",
+      "code": "def",
+      "type": "bool"
+    },
+    { "name": "Bot Played Defense Well",
+      "code": "dw",
+      "type": "bool"
     },
     { "name": "Died/Immobilized",
       "code": "die",
@@ -167,7 +140,7 @@ var config_data = `
       "code": "co",
       "type": "text",
       "size": 15,
-      "maxSize": 55
+      "maxSize": 955
     }
   ]
 }`;
