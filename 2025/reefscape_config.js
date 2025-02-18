@@ -13,7 +13,7 @@ var config_data = `
     { "name": "Scouter Full Name",
       "code": "s",
       "type": "scouter",
-      "size": 5,
+      "size": 99,
       "maxSize": 99,
       "required": "true"
     },
